@@ -1,4 +1,7 @@
-def calculate_mse(target,prediction):
+def calculate_mse(
+    target,
+    prediction
+):
 
     mse=0.5*((target-prediction)**2)
 

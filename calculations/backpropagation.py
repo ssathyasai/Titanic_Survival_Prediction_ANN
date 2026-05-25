@@ -1,4 +1,7 @@
-def backpropagation(target,results):
+def backpropagation(
+    target,
+    results
+):
 
     output=results["output"]
 
@@ -8,11 +11,31 @@ def backpropagation(target,results):
     w7=results["w7"]
     w8=results["w8"]
 
-    output_delta=(target-output)*output*(1-output)
 
-    h1_delta=h1*(1-h1)*w7*output_delta
+    output_delta=(target-output) * output * (1-output)
 
-    h2_delta=h2*(1-h2)*w8*output_delta
+
+    h1_delta=(
+        h1
+        *
+        (1-h1)
+        *
+        w7
+        *
+        output_delta
+    )
+
+
+    h2_delta=(
+        h2
+        *
+        (1-h2)
+        *
+        w8
+        *
+        output_delta
+    )
+
 
     return{
 
